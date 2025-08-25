@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="whitesmoke">#F5F5F5 </color>
+    <color name="back">#715A5A</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#262323</color>
+    <color name="white">#FFFFFF</color>
+    <!-- Background -->
+    <color name="bg_gradient_start">#3A1C71</color>
+    <color name="bg_gradient_end">#D76D77</color>
+
+    <!-- Buttons -->
+    <color name="btn_default">#FFFFFF</color>
+    <color name="btn_x">#FF6B6B</color>
+    <color name="btn_o">#4D96FF</color>
+
+
+</resources>
