@@ -28,3 +28,10 @@ Features a **3x3 grid**, **two-player mode**, and a **clean and simple UI**.
 ---
 
 ## Project Structure
+TicTacToe/
+├── app/ # Main application module
+│ ├── java/ # Java source code
+│ ├── res/ # Layouts, drawables, colors, etc.
+│ └── manifest/ # AndroidManifest.xml
+├── screenshots/ # App screenshots (optional)
+└── README.md
