@@ -1,6 +1,7 @@
 package com.example.tictactoe;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,16 @@ public class Main_activity extends AppCompatActivity {
 //                check(v);
 //            }
 //        });
+
+        // When the user will press the restart button then only the game will restart not on it's own...
+
+        Button res_btn=findViewById(R.id.Restart);
+        res_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Restart();
+            }
+        });
     }
 
     // to fetch id of the button which is pressed.....
@@ -68,12 +79,17 @@ public class Main_activity extends AppCompatActivity {
         flag=0;
         count=0;
         GameEnded=false;
+        Toast.makeText(this, "Game Restarted!", Toast.LENGTH_SHORT).show();
     }
 
     @SuppressLint("SetTextI18n")
     public void check(View view){       // view will have the reference of whichever button is clicked ...
         Button Current_btn = (Button) view; // but we need to type cast it...
 
+        // To notify user that the game has ended and they've to press the restart button to replay...
+        if(GameEnded){
+            Toast.makeText(this, "Game Ended! Press Restart Button", Toast.LENGTH_SHORT).show();
+        }
         if(Current_btn.getText().toString().equals("")){    // if the current button is blank then only perform the following task otherwise don't...
             count++;
             if (flag==0){               // for the first time flag will be 0 and x will be printed
@@ -123,10 +139,13 @@ public class Main_activity extends AppCompatActivity {
                     GameEnded=true;
                 }
             }
-            if(GameEnded){
-                Restart();
-            } else if (!GameEnded && count==9) {
-                Toast.makeText(this, "Oops! It's a Draw.", Toast.LENGTH_SHORT).show();
+
+//          if used this logic then game will automatically restart on it own ....
+//            if(GameEnded){
+//                Restart();
+//            } else
+            if (!GameEnded && count==9) {
+                Toast.makeText(this, "Oops! It's a Draw.", Toast.LENGTH_LONG).show();
                 Restart();
             }
         }

@@ -144,4 +144,15 @@
 
     </GridLayout>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Restart_game"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_button"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="end"/>
+
 </LinearLayout>
